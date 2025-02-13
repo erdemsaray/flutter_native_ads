@@ -37,6 +37,14 @@ dependencies:
   dio: ^5.7.0
   connectivity_plus: ^6.1.0
 
+  ## ads
+
+  google_mobile_ads: ^5.2.0
+
+
+
+  
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,5 +1,5 @@
-
 import 'package:flutter/services.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../exports/view_exports.dart';
 import '../helpers/database_helper.dart';
@@ -16,6 +16,8 @@ class Services {
     ]);
     await EasyLocalization.ensureInitialized();
     await DatabaseHelper.instance.initializeDatabase();
+
+    MobileAds.instance.initialize();
 
     // ! uncomment this to after configuring firebase
     // await Firebase.initializeApp(

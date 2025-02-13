@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GADNativeAdView">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jg4-4b-dIt">
+                    <rect key="frame" x="16" y="30" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Pgp-Tr-Xt3"/>
+                        <constraint firstAttribute="height" constant="40" id="lef-qg-IKt"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hxc-Ma-vXe">
+                    <rect key="frame" x="64" y="24" width="313" height="52"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fp-bv-YhF">
+                            <rect key="frame" x="0.0" y="0.0" width="313" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="Xgd-8K-hfg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-vO-dxx">
+                            <rect key="frame" x="0.0" y="28" width="313" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="Ydg-fV-WJg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jg4-4b-dIt" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4gf-qh-HXB"/>
+                <constraint firstItem="hxc-Ma-vXe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Bh3-gP-dQd"/>
+                <constraint firstItem="jg4-4b-dIt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Ej2-yP-hbf"/>
+                <constraint firstAttribute="trailing" secondItem="hxc-Ma-vXe" secondAttribute="trailing" constant="16" id="Kf7-dJ-gRB"/>
+                <constraint firstItem="hxc-Ma-vXe" firstAttribute="leading" secondItem="jg4-4b-dIt" secondAttribute="trailing" constant="8" id="wgf-Ug-JbV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bodyView" destination="Mfp-vO-dxx" id="ehs-1J-aga"/>
+                <outlet property="headlineView" destination="4fp-bv-YhF" id="NRc-5c-4Pc"/>
+                <outlet property="iconView" destination="jg4-4b-dIt" id="VWv-G4-CRJ"/>
+            </connections>
+            <point key="canvasLocation" x="32.824427480916029" y="-255.63380281690141"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
