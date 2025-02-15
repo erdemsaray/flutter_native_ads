@@ -1,7 +1,8 @@
 import '../../../core/exports/view_exports.dart';
 
 class SettingsItem extends StatelessWidget {
-  const SettingsItem({Key? key, required this.title, required this.onTap}) : super(key: key);
+  const SettingsItem({Key? key, required this.title,  this.onTap})
+      : super(key: key);
 
   final String title;
   final VoidCallback? onTap;
@@ -18,7 +19,7 @@ class SettingsItem extends StatelessWidget {
           color: Theme.of(context).colorScheme.primaryContainer,
           border: Border(
             bottom: BorderSide(
-              color: Colors.grey,
+              color: ColorConstants.graySecondary,
               width: 1.sp,
             ),
           ),

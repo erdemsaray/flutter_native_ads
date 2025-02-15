@@ -9,7 +9,7 @@ extension CustomThemeColors on ThemeData {
   // first color is for light theme, second color is for dark theme
   // color: Theme.of(context).firstWidgetColor -> for use
   Color get firstWidgetColor => themedColor(
-        lightColor: Colors.white,
-        darkColor: Colors.black,
+        lightColor: ColorConstants.white,
+        darkColor: ColorConstants.black,
       );
 }

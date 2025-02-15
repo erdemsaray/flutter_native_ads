@@ -8,7 +8,7 @@ import android.widget.TextView
 import com.google.android.gms.ads.nativead.NativeAd
 import com.google.android.gms.ads.nativead.NativeAdView
 import io.flutter.plugins.googlemobileads.GoogleMobileAdsPlugin
-import com.hundred.qibla.R
+import com.flutter.native_ads.R
 
 class NativeAdFactory(private val context: Context) : GoogleMobileAdsPlugin.NativeAdFactory {
 

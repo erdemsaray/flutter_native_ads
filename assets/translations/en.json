@@ -7,7 +7,11 @@
   "rateUs": "Rate Us",
   "sendFeedback": "Send Feedback",
   "about": "About",
-  "home": "Home",
-  "history": "History",
-  "study": "Study"
+  "banner": "Banner",
+  "interstitial": "Interstitial",
+  "native": "Native",
+  "rewarded": "Rewarded",
+  "showRewardedAd": "Show Rewarded Ad",
+  "showInterstitialAd": "Show Interstitial Ad"
+  
 }

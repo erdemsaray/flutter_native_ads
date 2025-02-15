@@ -17,27 +17,27 @@ class ThemeConstants {
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: ColorConstants.white,
-      selectedItemColor: Colors.orange,
-      unselectedItemColor: Colors.grey,
+      selectedItemColor: ColorConstants.orange,
+      unselectedItemColor: ColorConstants.graySecondary,
     ),
   );
 
   static final darkTheme = ThemeData.dark().copyWith(
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: ColorConstants.black,
     appBarTheme: const AppBarTheme(
       titleTextStyle: TextStyle(color: ColorConstants.white),
       color: ColorConstants.black,
-      iconTheme: IconThemeData(color: ColorConstants.black),
+      iconTheme: IconThemeData(color: ColorConstants.white),
     ),
     colorScheme: const ColorScheme.dark().copyWith(
-      primary: Colors.blueGrey,
+      primary: ColorConstants.blue,
       secondary: ColorConstants.darkGray,
       primaryContainer: ColorConstants.darkGray,
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: ColorConstants.white,
-      selectedItemColor: Colors.orange,
-      unselectedItemColor: Colors.grey,
+      selectedItemColor: ColorConstants.orange,
+      unselectedItemColor: ColorConstants.graySecondary,
     ),
   );
 }

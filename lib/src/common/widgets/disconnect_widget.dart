@@ -6,7 +6,7 @@ class DisconnectedWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: ColorConstants.white,
       child: const Center(
         child: Text("No internet connection"),
       ),

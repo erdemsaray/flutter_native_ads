@@ -22,7 +22,8 @@ class SettingsView extends StatelessWidget {
                   log("message");
                 }),
             Container(
-              padding: EdgeInsets.symmetric(vertical: 15.h), // Adjusted for iPhone 13
+              padding: EdgeInsets.symmetric(
+                  vertical: 15.h),
               child: Column(
                 children: [
                   SettingsSwitchItem(
@@ -36,13 +37,13 @@ class SettingsView extends StatelessWidget {
                       onChanged: (value) {
                         context.read<ThemeViewModel>().changeTheme();
                       }),
-                  SettingsItem(title: LocaleKeys.language.tr(), onTap: null),
+                  SettingsItem(title: LocaleKeys.language.tr()),
                 ],
               ),
             ),
-            SettingsItem(title: LocaleKeys.rateUs.tr(), onTap: null),
-            SettingsItem(title: LocaleKeys.sendFeedback.tr(), onTap: null),
-            SettingsItem(title: LocaleKeys.about.tr(), onTap: null),
+            SettingsItem(title: LocaleKeys.rateUs.tr()),
+            SettingsItem(title: LocaleKeys.sendFeedback.tr()),
+            SettingsItem(title: LocaleKeys.about.tr()),
           ],
         ),
       ),

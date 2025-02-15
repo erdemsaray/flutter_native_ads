@@ -1,14 +1,16 @@
 {
-    "settings":"Ayarlar",
-    "profile":"Profil",
-    "notifications":"Bildirimler",
-    "language":"Dil",
-    "darkMode":"Karanlık Mod",
-    "rateUs":"Bizi Değerlendir",
-    "sendFeedback":"Geri Bildirim Gönder",
-    "about":"Hakkında",
-    "home": "Ana Sayfa",
-    "history": "Geçmiş",
-    "study": "Çalışma"
-   
-}
+    "settings": "Ayarlar",
+    "profile": "Profil",
+    "notifications": "Bildirimler",
+    "language": "Dil",
+    "darkMode": "Karanlık Mod",
+    "rateUs": "Bizi Değerlendirin",
+    "sendFeedback": "Geri Bildirim Gönder",
+    "about": "Hakkımızda",
+    "banner": "Banner",
+    "interstitial": "Geçiş",
+    "native": "Yerel",
+    "rewarded": "Ödüllü",
+    "showRewardedAd": "Ödüllü Reklamı Göster",
+    "showInterstitialAd": "Geçiş Reklamı Göster"
+  }

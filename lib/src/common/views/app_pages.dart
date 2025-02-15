@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:native_ads/src/pages/interstitial_ads/view/interstitial_ads_view.dart';
+import 'package:native_ads/src/pages/native_ads/view/native_ads_view.dart';
+import 'package:native_ads/src/pages/rewarded_ads/view/rewarded_ads_view.dart';
 import 'package:provider/provider.dart';
 
-import '../../pages/home/home_view.dart';
+import '../../pages/banner_ads/view/banner_ads_view.dart';
 import '../../pages/settings/settings_view.dart';
 import '../view_models/app_view_model.dart';
 import '../widgets/animated_indexed_stack.dart';
@@ -15,66 +18,14 @@ class AppPages extends StatelessWidget {
         return AnimatedIndexedStack(
           index: appViewModel.index,
           children: const <Widget>[
-            HomeView(),
-            SecondPage(),
-            ThirdPage(),
-            FourthPage(),
+            BannerAdsView(),
+            InterstitialAdsView(),
+            NativeAdsView(),
+            RewardedAdsView(),
             SettingsView(),
           ],
         );
       },
-    );
-  }
-}
-
-class SecondPage extends StatelessWidget {
-  const SecondPage({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: Colors.green,
-        child: const Center(child: Text('Second Page')),
-      ),
-    );
-  }
-}
-
-class ThirdPage extends StatelessWidget {
-  const ThirdPage({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: Colors.blue,
-        child: const Center(child: Text('Third Page')),
-      ),
-    );
-  }
-}
-
-class FourthPage extends StatelessWidget {
-  const FourthPage({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: Colors.yellow,
-        child: const Center(child: Text('Fourth Page')),
-      ),
-    );
-  }
-}
-
-class FifthPage extends StatelessWidget {
-  const FifthPage({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: Colors.purple,
-        child: const Center(child: Text('Fifth Page')),
-      ),
     );
   }
 }

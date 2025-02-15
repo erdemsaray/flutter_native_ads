@@ -23,20 +23,20 @@ class _AppViewState extends State<AppView> {
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: const Icon(Icons.home_outlined),
-            label: LocaleKeys.home.tr(),
+            icon: const Icon(Icons.branding_watermark_sharp),
+            label: LocaleKeys.banner.tr(),
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.history),
-            label: LocaleKeys.history.tr(),
+            icon: const Icon(Icons.screen_rotation_alt_outlined),
+            label: LocaleKeys.interstitial.tr(),
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.book_outlined),
-            label: LocaleKeys.study.tr(),
+            icon: const Icon(Icons.android),
+            label: LocaleKeys.native.tr(),
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.person_outline),
-            label: LocaleKeys.profile.tr(),
+            icon: const Icon(Icons.card_giftcard),
+            label: LocaleKeys.rewarded.tr(),
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.settings),
@@ -56,4 +56,3 @@ class _AppViewState extends State<AppView> {
     context.read<AppViewModel>().updateIndex(index);
   }
 }
-
