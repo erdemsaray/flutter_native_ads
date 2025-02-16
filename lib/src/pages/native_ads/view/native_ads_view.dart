@@ -1,5 +1,6 @@
 import 'package:native_ads/src/core/exports/view_exports.dart';
 import 'package:native_ads/src/pages/native_ads/widgets/native_ad_card.dart';
+import 'package:native_ads/src/pages/native_ads/widgets/native_ad_card_square.dart';
 import '../view_model/native_ads_view_model.dart';
 
 class NativeAdsView extends StatelessWidget {
@@ -11,19 +12,27 @@ class NativeAdsView extends StatelessWidget {
       title: Text(LocaleKeys.native.tr()),
       body: Consumer<NativeAdsViewModel>(
         builder: (context, viewModel, child) {
-          if (!viewModel.isLoaded) {
-            viewModel.loadNativeAd();
-            return const Center(child: CircularProgressIndicator());
-          }
-
-          return Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              if (viewModel.nativeAd != null)
-                NativeAdCard(
-                  nativeAd: viewModel.nativeAd!,
-                ),
-            ],
+          return SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                if (viewModel.isLoaded && viewModel.nativeAd != null)
+                  NativeAdCard(
+                    nativeAd: viewModel.nativeAd!,
+                  ),
+                10.verticalSpace,
+                if (viewModel.isLoadedWithBackground &&
+                    viewModel.nativeAdWithBackground != null)
+                  NativeAdCard(
+                    nativeAd: viewModel.nativeAdWithBackground!,
+                  ),
+                10.verticalSpace,
+                if (viewModel.isLoadedMedia && viewModel.nativeAdMedia != null)
+                  NativeAdCardSquare(
+                    nativeAd: viewModel.nativeAdMedia!,
+                  ),
+              ],
+            ),
           );
         },
       ),

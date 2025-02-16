@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GADNativeAdView">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg1-view">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                
+                <!-- Media View -->
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="med-view" customClass="GADMediaView">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="med-h"/>
+                    </constraints>
+                </view>
+                
+                <!-- Content Stack -->
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="content-stack">
+                    <rect key="frame" x="16" y="216" width="361" height="168"/>
+                    <subviews>
+                        <!-- Header Stack -->
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="header-stack">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="48"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="icon-view">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="icon-w"/>
+                                        <constraint firstAttribute="height" constant="48" id="icon-h"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="text-stack">
+                                    <rect key="frame" x="60" y="0.0" width="301" height="48"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="headline-label">
+                                            <rect key="frame" x="0.0" y="0.0" width="301" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="body-label">
+                                            <rect key="frame" x="0.0" y="28" width="301" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        
+                        <!-- Call to Action Button -->
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cta-button">
+                            <rect key="frame" x="0.0" y="128" width="361" height="40"/>
+                            <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="cta-h"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Install Now">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <!-- Background View -->
+                <constraint firstItem="bg1-view" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bg1"/>
+                <constraint firstItem="bg1-view" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bg2"/>
+                <constraint firstAttribute="trailing" secondItem="bg1-view" secondAttribute="trailing" id="bg3"/>
+                <constraint firstAttribute="bottom" secondItem="bg1-view" secondAttribute="bottom" id="bg4"/>
+                
+                <!-- Media View -->
+                <constraint firstItem="med-view" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="med1"/>
+                <constraint firstItem="med-view" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="med2"/>
+                <constraint firstAttribute="trailing" secondItem="med-view" secondAttribute="trailing" id="med3"/>
+                
+                <!-- Content Stack -->
+                <constraint firstItem="content-stack" firstAttribute="top" secondItem="med-view" secondAttribute="bottom" constant="16" id="con1"/>
+                <constraint firstItem="content-stack" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="con2"/>
+                <constraint firstAttribute="trailing" secondItem="content-stack" secondAttribute="trailing" constant="16" id="con3"/>
+                <constraint firstAttribute="bottom" secondItem="content-stack" secondAttribute="bottom" constant="16" id="con4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bodyView" destination="body-label" id="body-out"/>
+                <outlet property="callToActionView" destination="cta-button" id="cta-out"/>
+                <outlet property="headlineView" destination="headline-label" id="headline-out"/>
+                <outlet property="iconView" destination="icon-view" id="icon-out"/>
+                <outlet property="mediaView" destination="med-view" id="media-out"/>
+            </connections>
+            <point key="canvasLocation" x="35.877862595419849" y="-11.267605633802818"/>
+        </view>
+    </objects>
+</document>

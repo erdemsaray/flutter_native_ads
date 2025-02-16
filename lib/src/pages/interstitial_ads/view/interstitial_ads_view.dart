@@ -13,15 +13,13 @@ class InterstitialAdsView extends StatelessWidget {
         body: Consumer<InterstitialAdsViewModel>(
           builder: (context, viewModel, child) {
             return Center(
-              child: viewModel.isLoading
-                  ? const CircularProgressIndicator()
-                  : ElevatedButton(
-                      onPressed: viewModel.showInterstitialAd,
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: ColorConstants.blue,
-                      ),
-                      child: Text(LocaleKeys.showInterstitialAd.tr()),
-                    ),
+              child: ElevatedButton(
+                onPressed: viewModel.showInterstitialAd,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: ColorConstants.blue,
+                ),
+                child: Text(LocaleKeys.showInterstitialAd.tr()),
+              ),
             );
           },
         ),

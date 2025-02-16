@@ -1,8 +1,8 @@
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:native_ads/src/core/exports/view_exports.dart';
 
-class NativeAdCard extends StatelessWidget {
-  const NativeAdCard({
+class NativeAdCardSquare extends StatelessWidget {
+  const NativeAdCardSquare({
     super.key,
     this.image,
     required this.nativeAd,
@@ -15,7 +15,7 @@ class NativeAdCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 1.sw,
-      height: 135.h,
+      height: 350.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24.r),
       ),

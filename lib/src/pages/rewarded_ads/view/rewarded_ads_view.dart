@@ -16,16 +16,13 @@ class RewardedAdsView extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  if (viewModel.isLoading)
-                    const CircularProgressIndicator()
-                  else
-                    ElevatedButton(
-                      onPressed: viewModel.showRewardedAd,
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: ColorConstants.blue,
-                      ),
-                      child: Text(LocaleKeys.showRewardedAd.tr()),
+                  ElevatedButton(
+                    onPressed: viewModel.showRewardedAd,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: ColorConstants.blue,
                     ),
+                    child: Text(LocaleKeys.showRewardedAd.tr()),
+                  ),
                   if (viewModel.rewardMessage.isNotEmpty)
                     Padding(
                       padding: EdgeInsets.all(16.sp),

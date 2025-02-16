@@ -143,11 +143,12 @@ class AdManager {
   // Native Ad Methods
   Future<NativeAd?> loadNativeAd({
     required void Function(bool isLoaded) onLoadStatusChanged,
+    String? factoryId,
   }) async {
     final nativeAd = NativeAd(
       adUnitId: nativeAdUnitId,
       request: const AdRequest(),
-      factoryId: 'listTile',
+      factoryId: factoryId ?? 'listTile',
       listener: NativeAdListener(
         onAdLoaded: (ad) {
           log('Native Ad loaded successfully');
