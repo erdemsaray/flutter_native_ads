@@ -2,7 +2,13 @@
 
 This project demonstrates a comprehensive implementation of Google AdMob in Flutter, with a special focus on **Customizable Native Ad Layouts**. It showcases how to create and manage different native ad formats that perfectly match your app's design, along with other ad formats for both Android and iOS platforms.
 
-![Demo Screens](screens.gif)
+
+## ScreenShots
+<p align="left"> 
+  <a> 
+   <img src="screens.gif" alt="Screenshot1" height="600em"/> 
+  </a> 
+  <p align="left"> 
 
 ## Features
 
